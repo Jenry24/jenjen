@@ -14,7 +14,7 @@ let page = 1;
 async function searchImages(){
 // Fetch images from Unsplash API based on user input
     keyword = searchtext.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accesskey}&per_page=15`;
+const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=xrorCaDofnXFV3-PXy7kmmRNKN6ALqXaaF7ygvSb4TM&per_page=15`;
     const response = await fetch(url);
     const data = await response.json();
 
