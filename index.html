@@ -13,17 +13,21 @@
     <header>
       <div class="logo"><img src="logo.png" alt="Logo"></div>
       <div class="heding"><h1>Image Search Engine</h1></div>
+    </header>
+    <div class="hero_section">
       <div class="search_box">
         <form id="search_bar">
           <input type="text" id="search_text" placeholder="Search Image" autocomplete="off">
           <button>Search</button>
         </form>
       </div>
-    </header>
-    <div class="hero_section">
-       <h3>👉 Click on the image to download and wait for 10 to 30 seconds ⌚ until the download is complete. ⏳</h3>
-       <div id="image_result"></div>
-       <button id="load_more">Load More</button>
+      <div class="auth_buttons"> <!-- New div for authentication buttons -->
+        <a href="registration.html"><button>Register</button></a>
+        <a href="index2.html"><button>Login</button></a>
+      </div>
+      <h3> To download images, please log in.</h3>
+      <div id="image_result"></div>
+      <button id="load_more">Load More</button>
     </div>
   </div>
   <!-- Importing the JavaScript file -->
