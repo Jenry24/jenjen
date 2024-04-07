@@ -1,92 +1,77 @@
-/*-----------------  IMPORT GOOGLE FONT  -----------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* style.css */
 
-/*-----------------  BASE  -----------------*/
+/*-----------------  IMPORT GOOGLE FONT  -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+
+/*-----------------  BASE  -----------------*/
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/*-----------------  VARIABLES  -----------------*/
+/*-----------------  VARIABLES  -----------------*/
+/* style.css */
+
+/* Update the colors */
 :root {
   /* Colors */
   --white_color: rgb(255, 255, 255);  /* Remains white for better contrast */
-  --orange_color: rgb(4, 20, 161);  /* We'll replace with a blue shade */
+  --blue_color: #573b8a;  /* Adjusted blue color */
   --black_color: rgb(0, 0, 0);        /* Remains black for text */
-  --background_color: linear-gradient(to top left, #ffffff, #3366ff);  /* White to blue gradient */
-  --grey-color: rgb(200, 200, 200);   /* Lighter grey for better contrast */
+  --background_color: linear-gradient(to top left   , #ffffff, var(--blue_color));  /* Adjusted background gradient */
 }
 
-/*-----------------  STYLING  -----------------*/
+
+/*-----------------  STYLING  -----------------*/
 .container {
-  width: 100%;
-  min-height: 100vh;
-  background-image: var(--background_color);
-  padding-bottom: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    background-image: var(--background_color);
+    padding-bottom: 1rem;
 }
 
 header {
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .logo {
-  width: 15rem;
-  height: 4rem;
+    width: 15rem;
+    height: 4rem;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
-  color: var(--white_color);
-  text-align: center;
-  padding: 1rem;
-  border-bottom: 0.2rem var(--orange_color) solid;
-  text-transform: uppercase;
+    color: var(--white_color);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 0.2rem var(--orange_color) solid;
+    text-transform: uppercase;
 }
+
+
 
 .search_box {
-  width: 20rem;
-  height: 3rem;
-}
-
-form {
-  width: 100%;
-  height: 100%;
-  background-color:var(--grey-color);
-  display: flex; /* Use flexbox for centering */
-  align-items: center;  /* Aligns items vertically within the form */
-  justify-content: center;  /* Centers the content horizontally within the form */
+  width: 20;
+  height: 50;
+  display: flex;
+  align-items: center;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-form input {
-  height: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  flex: 1;
-  color: var(--black_color);
-  font-size: 1rem;
-  padding: 0 0.8rem; 
-}
-
-form input::placeholder {
-  color:var(--black_color);
-}
 
 form button {
-  padding: 0 1rem;
   height: 100%;
-  background:var(--orange_color);
-  color:var(--white_color);
   font-size: 1rem;
   border: 0;
   outline: 0;
@@ -96,36 +81,208 @@ form button {
   transition: 0.5s;
 }
 
+
+form {
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey-color);
+    display: flex; /* Use flexbox for centering */
+    align-items: center;  /* Aligns items vertically within the form */
+    justify-content: center;  /* Centers the content horizontally within the form */
+    border-radius: 0.5rem;
+    flex-direction: column; /* Align inputs vertically */
+}
+
+form input {
+    width: 60%;
+    height: 40px;
+    margin: 10px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--white_color);
+}
+
+form input::placeholder {
+    color: var(--black_color);
+}
+
+form button {
+    padding: 0 1rem;
+    height: 40px;
+    margin-top: 10px;
+    background: var(--orange_color);
+    color: var(--white_color);
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #573b8a;
+}
+
 .hero_section {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
-  color: var(--white_color);
-  padding: 2rem 0 2rem 4rem;
+    color: var(--white_color);
+    padding: 2rem 0 2rem 4rem;
+    text-align: center;
+
 }
 
 #load_more {
-  color: var(--white_color);
-  background: var(--orange_color);
-  font-size: 1rem;
-  padding: 1rem;
-  border: 0;
-  outline: 0;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  margin: 0.6rem auto 8rem;
-  transition: 0.5s;
+    color: var(--white_color);
+    background: var(--orange_color);
+    font-size: 1rem;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0.6rem auto 8rem;
+    transition: 0.5s;
 }
 
 form button:hover, #load_more:hover {
-  color: var(--orange_color);
-  background: var(--white_color);
-  font-weight: bold;
+    color: var(--orange_color);
+    background: var(--white_color);
+    font-weight: bold;
 }
 
 #image_result {
-  width: 100%;
-  column-count: 3;
-  column-gap:normal}
+    width: 100%;
+    column-count: 3;
+    column-gap: normal;
+}
+.auth_buttons {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 1rem;
+}
+
+.auth_buttons button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--orange_color);
+  color: var(--white_color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth_buttons button:hover {
+  background-color: #573b8a;
+}
+
+
+/* Slide Navbar Styles */
+
+.main {
+    position: relative; /* Add relative positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main form {
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    background: red;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+#chk {
+    display: none;
+}
+
+.signup,
+.login {
+    position: absolute; /* Position forms */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup label,
+.login label {
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.signup input,
+.login input {
+    width: 60%;
+    height: 40px;
+    margin: 10px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--white_color);
+}
+
+.signup button,
+.login button {
+    width: 60%;
+    height: 40px;
+    margin-top: 10px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: var(--orange_color);
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.signup button:hover,
+.login button:hover {
+    background: #6d44b8;
+}
+.login {
+  position: absolute; /* Change to absolute positioning */
+  top: 50%; /* Move to the vertical center */
+  left: 50%; /* Move to the horizontal center */
+  transform: translate(-50%, -50%); /* Center the form */
+  height: auto; /* Remove fixed height to fit content */
+}
+
+.login label {
+  margin: 0; /* Remove margin */
+}
+
+#chk:checked ~ .login {
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+    transform: scale(1); 
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(.6);
+}
